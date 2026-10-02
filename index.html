@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abdul Wahab | Computer Engineering Student & Developer</title>
+    <meta
+      name="description"
+      content="Portfolio of Abdul Wahab - Computer Engineering Student (3rd Semester), Frontend Developer, SEO Specialist, and AI Creator."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+              mono: ['"JetBrains Mono"', 'monospace'],
+            },
+            colors: {
+              brand: {
+                50: '#eef2ff',
+                100: '#e0e7ff',
+                400: '#818cf8',
+                500: '#6366f1',
+                600: '#4f46e5',
+                700: '#4338ca',
+              },
+              accent: {
+                cyan: '#06b6d4',
+                emerald: '#10b981',
+                lime: '#84cc16',
+                purple: '#a855f7',
+              },
+              dark: {
+                bg: '#090d16',
+                surface: '#0f172a',
+                card: '#131e36',
+                border: '#1e293b',
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body
+    class="bg-slate-50 text-slate-900 dark:bg-dark-bg dark:text-slate-100 transition-colors duration-300 font-sans antialiased selection:bg-brand-500 selection:text-white relative overflow-x-hidden min-h-screen"
+  >
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+      <div class="absolute -top-40 -left-40 w-96 h-96 bg-brand-500/15 dark:bg-brand-500/20 rounded-full blur-3xl"></div>
+      <div class="absolute top-1/3 -right-40 w-96 h-96 bg-accent-cyan/15 dark:bg-accent-cyan/15 rounded-full blur-3xl"></div>
+      <div class="absolute -bottom-40 left-1/3 w-96 h-96 bg-accent-purple/15 dark:bg-accent-purple/15 rounded-full blur-3xl"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] dark:bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:24px_24px] opacity-40"></div>
+    </div>
+
+    <header
+      class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-md bg-white/80 dark:bg-dark-bg/80 border-b border-slate-200/80 dark:border-slate-800/80"
+      id="navbar"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+        <a href="#hero" class="flex items-center gap-3 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 via-indigo-600 to-accent-cyan flex items-center justify-center text-white font-mono font-bold text-lg shadow-md shadow-brand-500/20 group-hover:scale-105 transition-transform">
+            AW
+          </div>
+          <div class="flex flex-col">
+            <span class="font-bold text-lg tracking-tight group-hover:text-brand-500 transition-colors">Abdul Wahab</span>
+            <span class="text-xs text-slate-500 dark:text-slate-400 font-mono -mt-1">&lt;ComputerEngineering 3rdSem /&gt;</span>
+          </div>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-1 lg:gap-2">
+          <a href="#about" class="nav-link px-3 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-white rounded-lg transition-colors">About</a>
+          <a href="#skills" class="nav-link px-3 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-white rounded-lg transition-colors">Skills</a>
+          <a href="#projects" class="nav-link px-3 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-white rounded-lg transition-colors">Projects</a>
+          <a href="#experience" class="nav-link px-3 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-white rounded-lg transition-colors">Academics</a>
+          <a href="#contact" class="nav-link px-3 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-white rounded-lg transition-colors">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <button id="theme-toggle" aria-label="Toggle Theme" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-dark-surface/70 text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 hover:border-brand-500 transition-all shadow-sm">
+            <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+            <i data-lucide="moon" class="w-5 h-5 block dark:hidden"></i>
+          </button>
+
+          <a href="#contact" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-brand-600 to-indigo-600 hover:from-brand-500 hover:to-indigo-500 rounded-xl shadow-md shadow-brand-500/25 transition-all hover:shadow-lg hover:shadow-brand-500/35 hover:-translate-y-0.5">
+            <span>Get in Touch</span>
+            <i data-lucide="send" class="w-4 h-4"></i>
+          </a>
+
+          <button id="mobile-menu-btn" aria-label="Open navigation menu" class="md:hidden p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-dark-surface/70 text-slate-700 dark:text-slate-200">
+            <i data-lucide="menu" id="menu-icon-open" class="w-5 h-5"></i>
+            <i data-lucide="x" id="menu-icon-close" class="w-5 h-5 hidden"></i>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-6 bg-white/95 dark:bg-dark-bg/95 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800 shadow-2xl transition-all">
+        <div class="flex flex-col space-y-2">
+          <a href="#about" class="mobile-nav-link px-4 py-3 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800/60 font-medium">About</a>
+          <a href="#skills" class="mobile-nav-link px-4 py-3 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800/60 font-medium">Skills</a>
+          <a href="#projects" class="mobile-nav-link px-4 py-3 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800/60 font-medium">Projects</a>
+          <a href="#experience" class="mobile-nav-link px-4 py-3 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800/60 font-medium">Academics</a>
+          <a href="#contact" class="mobile-nav-link px-4 py-3 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800/60 font-medium">Contact</a>
+          <div class="pt-2">
+            <a href="#contact" class="w-full inline-flex justify-center items-center gap-2 px-4 py-3 text-sm font-semibold text-white bg-brand-600 rounded-xl">
+              <span>Contact Me</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="relative z-10 pt-20">
+      <section id="hero" class="min-h-[calc(100vh-5rem)] flex items-center justify-center px-4 sm:px-6 lg:px-8 py-16">
+        <div class="max-w-5xl mx-auto w-full text-center">
+          <div class="flex justify-center mb-6">
+            <div class="relative group">
+              <div class="absolute -inset-1 bg-gradient-to-r from-brand-500 via-accent-cyan to-accent-lime rounded-full blur-md opacity-75 group-hover:opacity-100 transition duration-300"></div>
+              <img
+                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=80"
+                alt="Abdul Wahab"
+                class="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full object-cover border-4 border-slate-900 shadow-2xl"
+              />
+            </div>
+          </div>
+
+          <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-xs sm:text-sm font-medium mb-6 animate-fade-in shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+            <span>Computer Engineering Undergrad • 3rd Semester</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.15] mb-6">
+            Hi, I'm <span class="text-brand-500">Abdul Wahab</span> <br class="hidden sm:inline" />
+            <span class="bg-gradient-to-r from-brand-500 via-indigo-400 to-accent-cyan bg-clip-text text-transparent">
+              Bridging Hardware, Code & AI
+            </span>
+          </h1>
+
+          <div class="text-lg sm:text-2xl text-slate-600 dark:text-slate-300 font-mono mb-8 h-8 flex items-center justify-center gap-1">
+            <span>Specializing in</span>
+            <span id="typing-text" class="text-brand-600 dark:text-brand-400 font-semibold border-r-2 border-brand-500 pr-1 animate-pulse">Computer Engineering</span>
+          </div>
+
+          <p class="max-w-2xl mx-auto text-base sm:text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-10">
+            Computer Engineering student building real-world systems — from C++ software architectures and analog electronics (Audio Amplifiers) to responsive web development, technical SEO, and generative AI video creation.
+          </p>
+
+          <div class="flex flex-wrap items-center justify-center gap-4 mb-14">
+            <a href="#projects" class="px-7 py-3.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-semibold text-sm sm:text-base shadow-lg shadow-brand-500/30 hover:shadow-brand-500/40 hover:-translate-y-0.5 transition-all inline-flex items-center gap-2">
+              <span>View My Projects</span>
+              <i data-lucide="sparkles" class="w-4 h-4"></i>
+            </a>
+            <a href="#skills" class="px-7 py-3.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white/50 dark:bg-dark-surface/50 hover:bg-slate-100 dark:hover:bg-slate-800 font-semibold text-sm sm:text-base text-slate-800 dark:text-slate-200 transition-all inline-flex items-center gap-2 backdrop-blur-sm">
+              <span>Explore Skills</span>
+              <i data-lucide="cpu" class="w-4 h-4"></i>
+            </a>
+            <a href="#contact" class="px-5 py-3.5 rounded-xl border border-dashed border-slate-300 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:text-brand-500 dark:hover:text-brand-400 font-medium text-sm transition-all inline-flex items-center gap-2">
+              <i data-lucide="mail" class="w-4 h-4"></i>
+              <span>Contact Me</span>
+            </a>
+          </div>
+
+          <div class="flex items-center justify-center gap-6 text-slate-400">
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" class="p-2.5 rounded-xl hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/80 transition-all hover:scale-110">
+              <i data-lucide="github" class="w-5 h-5"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="p-2.5 rounded-xl hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/80 transition-all hover:scale-110">
+              <i data-lucide="linkedin" class="w-5 h-5"></i>
+            </a>
+            <a href="mailto:abdul.wahab@example.com" aria-label="Send Email" class="p-2.5 rounded-xl hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/80 transition-all hover:scale-110">
+              <i data-lucide="mail" class="w-5 h-5"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row items-center gap-12 lg:gap-16">
+          <div class="w-full md:w-5/12 flex justify-center">
+            <div class="relative group">
+              <div class="absolute -inset-1 bg-gradient-to-r from-brand-600 via-accent-purple to-accent-cyan rounded-3xl blur-xl opacity-50 group-hover:opacity-75 transition duration-500"></div>
+              <div class="relative w-72 sm:w-80 rounded-2xl bg-white dark:bg-dark-card border border-slate-200 dark:border-slate-800 p-4 shadow-2xl flex flex-col justify-between overflow-hidden">
+                <div class="w-full h-72 rounded-xl overflow-hidden relative border border-slate-200/50 dark:border-slate-700/50 group-hover:scale-[1.02] transition-transform duration-300">
+                  <img
+                    src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=900&q=80"
+                    alt="Abdul Wahab"
+                    class="w-full h-full object-cover"
+                  />
+                  <div class="absolute bottom-3 left-3 px-3 py-1 rounded-lg bg-black/75 backdrop-blur-md text-white text-xs font-mono">
+                    🎓 3rd Semester Undergrad
+                  </div>
+                </div>
+
+                <div class="p-2 pt-4">
+                  <div class="flex items-center justify-between text-xs text-slate-500 dark:text-slate-400 font-mono">
+                    <span>Major: Computer Eng.</span>
+                    <span class="text-emerald-500 font-semibold">● Enrolled</span>
+                  </div>
+                  <p class="text-base font-bold text-slate-800 dark:text-slate-200 mt-1">Abdul Wahab</p>
+                  <p class="text-xs text-brand-600 dark:text-brand-400 font-mono">Software • Hardware • SEO • AI</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-full md:w-7/12">
+            <div class="inline-flex items-center gap-2 text-brand-600 dark:text-brand-400 font-mono text-sm uppercase tracking-wider mb-3">
+              <i data-lucide="terminal" class="w-4 h-4"></i>
+              <span>About Me</span>
+            </div>
+
+            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white mb-6">
+              Computer Engineering student driven by practical engineering, digital growth & creative AI.
+            </h2>
+
+            <p class="text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+              Hello! I'm <strong>Abdul Wahab</strong>, an enthusiastic <strong>Computer Engineering student currently in my 3rd semester</strong>. My academic journey combines deep hardware fundamentals with modern software development, web engineering, search engine optimization, and generative multimedia tools.
+            </p>
+
+            <p class="text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+              On the engineering side, I have developed comprehensive systems in <strong>C++ (School Management System)</strong> implementing object-oriented design and file handling, and engineered an analog <strong>Audio Amplifier</strong> in my 2nd semester electronics project. On the web side, I craft responsive front-end layouts including a responsive <strong>Netflix Clone</strong> using HTML and CSS.
+            </p>
+
+            <p class="text-slate-600 dark:text-slate-300 leading-relaxed mb-8">
+              Beyond coding, I am a certified <strong>SEO Specialist</strong> proficient in on-page, off-page, technical SEO, and link building strategies. I also produce engaging multimedia through <strong>video editing, cartoon creation, AI video generation, and AI application building</strong>.
+            </p>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+              <div class="p-4 rounded-xl bg-white dark:bg-dark-card border border-slate-200 dark:border-slate-800 shadow-sm">
+                <span class="block text-3xl font-extrabold text-brand-600 dark:text-brand-400 font-mono">3rd Sem</span>
+                <span class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-medium">Computer Engineering</span>
+              </div>
+              <div class="p-4 rounded-xl bg-white dark:bg-dark-card border border-slate-200 dark:border-slate-800 shadow-sm">
+                <span class="block text-3xl font-extrabold text-accent-cyan font-mono">Hardware+</span>
+                <span class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-medium">Audio Amp & Circuits</span>
+              </div>
+              <div class="p-4 rounded-xl bg-white dark:bg-dark-card border border-slate-200 dark:border-slate-800 shadow-sm col-span-2 sm:col-span-1">
+                <span class="block text-3xl font-extrabold text-emerald-500 font-mono">SEO & AI</span>
+                <span class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-medium">Rankings & Media</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 text-brand-600 dark:text-brand-400 font-mono text-sm uppercase tracking-wider mb-3">
+            <i data-lucide="cpu" class="w-4 h-4"></i>
+            <span>Multi-Disciplinary Skillset</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white mb-4">
+            Core Competencies & Technologies
+          </h2>
+          <p class="text-slate-600 dark:text-slate-400">
+            From low-level engineering and web development to digital marketing and AI multimedia.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="p-6 rounded-2xl bg-white dark:bg-dark-card border border-slate-200 dark:border-slate-800 shadow-sm hover:border-brand-500/50 hover:shadow-lg transition-all group">
+            <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-600 dark:text-brand-400 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+              <i data-lucide="cpu" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Computer Engineering</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mb-4">Systems programming, logic design, and hardware circuitry.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-tag">C++ Programming</span>
+              <span class="skill-tag">Object-Oriented (OOP)</span>
+              <span class="skill-tag">File Handling</span>
+              <span class="skill-tag">Audio Amplifiers</span>
+              <span class="skill-tag">Analog Circuits</span>
+              <span class="skill-tag">Data Structures</span>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-white dark:bg-dark-card border border-slate-200 dark:border-slate-800 shadow-sm hover:border-accent-cyan/50 hover:shadow-lg transition-all group">
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 text-accent-cyan flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+              <i data-lucide="layout" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Frontend Development</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mb-4">Crafting responsive, clean, and interactive user interfaces.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-tag">HTML5</span>
+              <span class="skill-tag">CSS3</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">Responsive Design</span>
+              <span class="skill-tag">Tailwind CSS</span>
+              <span class="skill-tag">UI/UX Styling</span>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-white dark:bg-dark-card border border-slate-200 dark:border-slate-800 shadow-sm hover:border-emerald-500/50 hover:shadow-lg transition-all group">
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+              <i data-lucide="trending-up" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">SEO Specialist</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mb-4">Driving search rankings, technical audits, and link growth.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-tag">On-Page SEO</span>
+              <span class="skill-tag">Off-Page SEO</span>
+              <span class="skill-tag">Technical SEO</span>
+              <span class="skill-tag">Link Building</span>
+              <span class="skill-tag">Keyword Strategy</span>
+              <span class="skill-tag">Site Audits</span>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-white dark:bg-dark-card border border-slate-200 dark:border-slate-800 shadow-sm hover:border-purple-500/50 hover:shadow-lg transition-all group">
+            <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-accent-purple flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+              <i data-lucide="video" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Video & AI Creation</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mb-4">Video editing, cartoon generation, and AI application tools.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-tag">Video Editing</span>
+              <span class="skill-tag">Cartoon Creation</span>
+              <span class="skill-tag">AI Video Generation</span>
+              <span class="skill-tag">AI App Builder</span>
+              <span class="skill-tag">Prompt Engineering</span>
+              <span class="skill-tag">Storyboarding</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+          <div>
+            <div class="inline-flex items-center gap-2 text-brand-600 dark:text-brand-400 font-mono text-sm uppercase tracking-wider mb-3">
+              <i data-lucide="layers" class="w-4 h-4"></i>
+              <span>Engineering & Web Showcase</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white">
+              Featured Projects
+            </h2>
+          </div>
+
+          <div class="flex flex-wrap gap-2 mt-6 md:mt-0" id="project-filters">
+            <button data-filter="all" class="filter-btn active px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all">All</button>
+            <button data-filter="engineering" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all">Engineering & C++</button>
+            <button data-filter="frontend" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all">Frontend</button>
+            <button data-filter="seo" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all">SEO</button>
+            <button data-filter="ai" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all">AI & Media</button>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+          <div class="project-card group rounded-2xl bg-white dark:bg-dark-card border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col" data-category="engineering">
+            <div class="relative h-48 bg-gradient-to-tr from-brand-700 via-indigo-900 to-slate-900 flex items-center justify-center p-6 overflow-hidden">
+              <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+              <i data-lucide="graduation-cap" class="w-16 h-16 text-white/40 group-hover:scale-110 group-hover:text-white/80 transition-all"></i>
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-lg bg-black/60 backdrop-blur-md text-[11px] font-mono font-medium text-white">C++ / Engineering</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-brand-500 transition-colors mb-2">School Management System</h3>
+                <p class="text-sm text-slate-600 dark:text-slate-400 mb-4 line-clamp-2">
+                  A complete C++ object-oriented academic management platform featuring student enrollment, fee tracking, grade calculation, and persistent file storage.
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-6">
+                  <span class="tech-badge">C++</span>
+                  <span class="tech-badge">OOP</span>
+                  <span class="tech-badge">File Handling</span>
+                  <span class="tech-badge">Data Structures</span>
+                </div>
+              </div>
+              <div class="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-800/80">
+                <button class="project-details-btn text-xs font-semibold text-brand-600 dark:text-brand-400 hover:underline flex items-center gap-1" data-project="1">
+                  <span>View Details</span>
+                  <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                </button>
+                <div class="flex items-center gap-3 text-slate-400">
+                  <a href="https://github.com" target="_blank" rel="noopener" class="hover:text-slate-900 dark:hover:text-white" title="Source Code">
+                    <i data-lucide="github" class="w-4 h-4"></i>
+                  </a>
+                  <a href="#contact" class="hover:text-slate-900 dark:hover:text-white" title="Project Details">
+                    <i data-lucide="file-code" class="w-4 h-4"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card group rounded-2xl bg-white dark:bg-dark-card border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col" data-category="frontend">
+            <div class="relative h-48 bg-gradient-to-tr from-rose-900 via-red-950 to-slate-900 flex items-center justify-center p-6 overflow-hidden">
+              <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+              <i data-lucide="tv" class="w-16 h-16 text-white/40 group-hover:scale-110 group-hover:text-white/80 transition-all"></i>
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-lg bg-black/60 backdrop-blur-md text-[11px] font-mono font-medium text-white">Frontend</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-brand-500 transition-colors mb-2">Netflix Web UI Clone</h3>
+                <p class="text-sm text-slate-600 dark:text-slate-400 mb-4 line-clamp-2">
+                  Pixel-perfect Netflix homepage replica built purely with semantic HTML5 and CSS3, including responsive media queries, movie rows, and hero banner.
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-6">
+                  <span class="tech-badge">HTML5</span>
+                  <span class="tech-badge">CSS3</span>
+                  <span class="tech-badge">Flexbox & Grid</span>
+                  <span class="tech-badge">Responsive</span>
+                </div>
+              </div>
+              <div class="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-800/80">
+                <button class="project-details-btn text-xs font-semibold text-brand-600 dark:text-brand-400 hover:underline flex items-center gap-1" data-project="2">
+                  <span>View Details</span>
+                  <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                </button>
+                <div class="flex items-center gap-3 text-slate-400">
+                  <a href="https://github.com" target="_blank" rel="noopener" class="hover:text-slate-900 dark:hover:text-white" title="Source Code">
+                    <i data-lucide="github" class="w-4 h-4"></i>
+                  </a>
+                  <a href="#contact" class="hover:text-slate-900 dark:hover:text-white" title="Live Preview">
+                    <i data-lucide="external-link" class="w-4 h-4"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card group rounded-2xl bg-white dark:bg-dark-card border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col" data-category="engineering">
+            <div class="relative h-48 bg-gradient-to-tr from-amber-800 via-yellow-900 to-slate-900 flex items-center justify-center p-6 overflow-hidden">
+              <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+              <i data-lucide="volume-2" class="w-16 h-16 text-white/40 group-hover:scale-110 group-hover:text-white/80 transition-all"></i>
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-lg bg-black/60 backdrop-blur-md text-[11px] font-mono font-medium text-white">Hardware / 2nd Sem</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-brand-500 transition-colors mb-2">Hardware Audio Amplifier</h3>
+                <p class="text-sm text-slate-600 dark:text-slate-400 mb-4 line-clamp-2">
+                  2nd Semester electronic engineering project: multi-stage analog audio amplifier circuit engineered for low harmonic distortion and clean acoustic gain.
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-6">
+                  <span class="tech-badge">Analog Circuits</span>
+                  <span class="tech-badge">Transistors</span>
+                  <span class="tech-badge">Filtering</span>
+                  <span class="tech-badge">Hardware Lab</span>
+                </div>
+              </div>
+              <div class="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-800/80">
+                <button class="project-details-btn text-xs font-semibold text-brand-600 dark:text-brand-400 hover:underline flex items-center gap-1" data-project="3">
+                  <span>View Details</span>
+                  <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                </button>
+                <div class="flex items-center gap-3 text-slate-400">
+                  <a href="#contact" class="hover:text-slate-900 dark:hover:text-white" title="Project Schematics">
+                    <i data-lucide="cpu" class="w-4 h-4"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card group rounded-2xl bg-white dark:bg-dark-card border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col" data-category="ai">
+            <div class="relative h-48 bg-gradient-to-tr from-purple-800 via-indigo-950 to-slate-900 flex items-center justify-center p-6 overflow-hidden">
+              <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+              <i data-lucide="clapperboard" class="w-16 h-16 text-white/40 group-hover:scale-110 group-hover:text-white/80 transition-all"></i>
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-lg bg-black/60 backdrop-blur-md text-[11px] font-mono font-medium text-white">AI & Media</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-brand-500 transition-colors mb-2">AI Cartoon & Video Studio</h3>
+                <p class="text-sm text-slate-600 dark:text-slate-400 mb-4 line-clamp-2">
+                  Creative storytelling pipeline synthesizing AI generated animations, cartoon characters, voiceover narration, and seamless post-production video editing.
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-6">
+                  <span class="tech-badge">AI Video</span>
+                  <span class="tech-badge">Cartoon Creation</span>
+                  <span class="tech-badge">Video Editing</span>
+                  <span class="tech-badge">Multimedia</span>
+                </div>
+              </div>
+              <div class="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-800/80">
+                <button class="project-details-btn text-xs font-semibold text-brand-600 dark:text-brand-400 hover:underline flex items-center gap-1" data-project="4">
+                  <span>View Details</span>
+                  <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                </button>
+                <div class="flex items-center gap-3 text-slate-400">
+                  <a href="#contact" class="hover:text-slate-900 dark:hover:text-white" title="Watch Samples">
+                    <i data-lucide="play" class="w-4 h-4"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card group rounded-2xl bg-white dark:bg-dark-card border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col" data-category="ai">
+            <div class="relative h-48 bg-gradient-to-tr from-cyan-800 via-teal-950 to-slate-900 flex items-center justify-center p-6 overflow-hidden">
+              <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+              <i data-lucide="sparkles" class="w-16 h-16 text-white/40 group-hover:scale-110 group-hover:text-white/80 transition-all"></i>
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-lg bg-black/60 backdrop-blur-md text-[11px] font-mono font-medium text-white">AI App Builder</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-brand-500 transition-colors mb-2">Modern AI App Builder</h3>
+                <p class="text-sm text-slate-600 dark:text-slate-400 mb-4 line-clamp-2">
+                  Rapid web application builder leveraging AI prompts, custom logic flows, and responsive UI components for quick utility tool deployment.
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-6">
+                  <span class="tech-badge">AI Builder</span>
+                  <span class="tech-badge">Prompting</span>
+                  <span class="tech-badge">Prototyping</span>
+                  <span class="tech-badge">Web Tools</span>
+                </div>
+              </div>
+              <div class="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-800/80">
+                <button class="project-details-btn text-xs font-semibold text-brand-600 dark:text-brand-400 hover:underline flex items-center gap-1" data-project="5">
+                  <span>View Details</span>
+                  <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                </button>
+                <div class="flex items-center gap-3 text-slate-400">
+                  <a href="#contact" class="hover:text-slate-900 dark:hover:text-white" title="App Demo">
+                    <i data-lucide="external-link" class="w-4 h-4"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card group rounded-2xl bg-white dark:bg-dark-card border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col" data-category="seo">
+            <div class="relative h-48 bg-gradient-to-tr from-emerald-800 via-green-950 to-slate-900 flex items-center justify-center p-6 overflow-hidden">
+              <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+              <i data-lucide="search" class="w-16 h-16 text-white/40 group-hover:scale-110 group-hover:text-white/80 transition-all"></i>
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-lg bg-black/60 backdrop-blur-md text-[11px] font-mono font-medium text-white">SEO & Link Building</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-brand-500 transition-colors mb-2">Technical SEO & Link Strategy</h3>
+                <p class="text-sm text-slate-600 dark:text-slate-400 mb-4 line-clamp-2">
+                  Comprehensive search engine audit, on-page schema markup, core web vitals speedup, and high-authority link-building outreach campaign.
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-6">
+                  <span class="tech-badge">On-Page</span>
+                  <span class="tech-badge">Off-Page</span>
+                  <span class="tech-badge">Technical SEO</span>
+                  <span class="tech-badge">Link Building</span>
+                </div>
+              </div>
+              <div class="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-800/80">
+                <button class="project-details-btn text-xs font-semibold text-brand-600 dark:text-brand-400 hover:underline flex items-center gap-1" data-project="6">
+                  <span>View Details</span>
+                  <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                </button>
+                <div class="flex items-center gap-3 text-slate-400">
+                  <a href="#contact" class="hover:text-slate-900 dark:hover:text-white" title="Case Study">
+                    <i data-lucide="bar-chart-2" class="w-4 h-4"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="py-24 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+        <div class="text-center mb-16">
+          <div class="inline-flex items-center gap-2 text-brand-600 dark:text-brand-400 font-mono text-sm uppercase tracking-wider mb-3">
+            <i data-lucide="book-open" class="w-4 h-4"></i>
+            <span>Academic Milestones</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white mb-4">
+            Education & Practical Projects
+          </h2>
+        </div>
+
+        <div class="relative border-l-2 border-slate-200 dark:border-slate-800 ml-4 sm:ml-8 pl-6 sm:pl-8 space-y-12">
+          <div class="relative group">
+            <div class="absolute -left-[35px] sm:-left-[43px] top-1.5 w-6 h-6 rounded-full bg-white dark:bg-dark-bg border-4 border-brand-500 group-hover:scale-125 transition-transform"></div>
+            <div class="p-6 rounded-2xl bg-white dark:bg-dark-card border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                <h3 class="text-lg font-bold text-slate-900 dark:text-white">Computer Engineering — 3rd Semester</h3>
+                <span class="text-xs font-mono px-3 py-1 rounded-full bg-brand-500/10 text-brand-600 dark:text-brand-400 font-semibold">Currently Enrolled</span>
+              </div>
+              <p class="text-sm font-semibold text-brand-600 dark:text-brand-400 mb-3">Bachelor of Science in Computer Engineering</p>
+              <ul class="text-sm text-slate-600 dark:text-slate-400 space-y-2 list-disc list-inside">
+                <li>Mastering Object-Oriented Programming (OOP) in C++ and building modular systems like the School Management System.</li>
+                <li>Studying Data Structures, Digital Logic Design, and computer system architecture.</li>
+                <li>Expanding front-end web development skills and applying practical SEO growth methods.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="relative group">
+            <div class="absolute -left-[35px] sm:-left-[43px] top-1.5 w-6 h-6 rounded-full bg-white dark:bg-dark-bg border-4 border-accent-cyan group-hover:scale-125 transition-transform"></div>
+            <div class="p-6 rounded-2xl bg-white dark:bg-dark-card border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                <h3 class="text-lg font-bold text-slate-900 dark:text-white">2nd Semester Project: Hardware Audio Amplifier</h3>
+                <span class="text-xs font-mono px-3 py-1 rounded-full bg-cyan-500/10 text-accent-cyan font-semibold">Completed</span>
+              </div>
+              <p class="text-sm font-semibold text-accent-cyan mb-3">Electronic Circuit Design & Lab Implementation</p>
+              <ul class="text-sm text-slate-600 dark:text-slate-400 space-y-2 list-disc list-inside">
+                <li>Designed and assembled a functional multi-stage analog audio amplifier circuit on breadboard and PCB.</li>
+                <li>Tested input signal gain, frequency response, and impedance matching using oscilloscope and signal generators.</li>
+                <li>Achieved low noise and distortion for clear acoustic loudspeaker output.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="relative group">
+            <div class="absolute -left-[35px] sm:-left-[43px] top-1.5 w-6 h-6 rounded-full bg-white dark:bg-dark-bg border-4 border-accent-purple group-hover:scale-125 transition-transform"></div>
+            <div class="p-6 rounded-2xl bg-white dark:bg-dark-card border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                <h3 class="text-lg font-bold text-slate-900 dark:text-white">Digital Skills: Web Development, SEO & AI Media</h3>
+                <span class="text-xs font-mono px-3 py-1 rounded-full bg-purple-500/10 text-accent-purple font-semibold">Continuous Practice</span>
+              </div>
+              <p class="text-sm font-semibold text-accent-purple mb-3">Front-End Design, SEO Auditing & Generative AI</p>
+              <p class="text-sm text-slate-600 dark:text-slate-400">
+                Developed the Netflix UI clone with HTML & CSS. Implemented on-page and off-page technical SEO campaigns with strategic link building. Producing AI-driven cartoon videos and experimenting with AI application builders.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+          <div>
+            <div class="inline-flex items-center gap-2 text-brand-600 dark:text-brand-400 font-mono text-sm uppercase tracking-wider mb-3">
+              <i data-lucide="mail-check" class="w-4 h-4"></i>
+              <span>Get in Touch</span>
+            </div>
+
+            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white mb-6">
+              Let's collaborate on engineering, web, or AI projects.
+            </h2>
+
+            <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-8">
+              Whether you want to discuss Computer Engineering projects, need front-end web development, seek SEO & link-building consultation, or want AI video creation, feel free to reach out!
+            </p>
+
+            <div class="space-y-4 mb-8">
+              <div class="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-dark-card border border-slate-200 dark:border-slate-800">
+                <div class="w-10 h-10 rounded-lg bg-brand-500/10 text-brand-600 dark:text-brand-400 flex items-center justify-center shrink-0">
+                  <i data-lucide="mail" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <span class="block text-xs text-slate-500 dark:text-slate-400">Email Me At</span>
+                  <a href="mailto:abdul.wahab@example.com" class="font-medium text-slate-800 dark:text-slate-200 hover:text-brand-500 transition-colors">abdul.wahab@example.com</a>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-dark-card border border-slate-200 dark:border-slate-800">
+                <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-500 flex items-center justify-center shrink-0">
+                  <i data-lucide="map-pin" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <span class="block text-xs text-slate-500 dark:text-slate-400">Current Status</span>
+                  <span class="font-medium text-slate-800 dark:text-slate-200">Computer Engineering Student (3rd Sem) • Open to Projects</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-8 rounded-2xl bg-white dark:bg-dark-card border border-slate-200 dark:border-slate-800 shadow-xl relative">
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-6">Send Abdul a Message</h3>
+
+            <form id="contact-form" class="space-y-5">
+              <div>
+                <label for="name" class="block text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-300 mb-2">Your Name</label>
+                <input type="text" id="name" name="name" required placeholder="John Doe" class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-dark-surface text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent text-sm transition" />
+              </div>
+
+              <div>
+                <label for="email" class="block text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-300 mb-2">Email Address</label>
+                <input type="email" id="email" name="email" required placeholder="john@example.com" class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-dark-surface text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent text-sm transition" />
+              </div>
+
+              <div>
+                <label for="subject" class="block text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-300 mb-2">Subject</label>
+                <input type="text" id="subject" name="subject" required placeholder="Project Inquiry / Collaboration" class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-dark-surface text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent text-sm transition" />
+              </div>
+
+              <div>
+                <label for="message" class="block text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-300 mb-2">Message</label>
+                <textarea id="message" name="message" rows="4" required placeholder="Tell me about your project, timeline, or requirements..." class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-dark-surface text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent text-sm transition resize-none"></textarea>
+              </div>
+
+              <button type="submit" id="submit-btn" class="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-brand-600 to-indigo-600 hover:from-brand-500 hover:to-indigo-500 text-white font-semibold text-sm shadow-lg shadow-brand-500/25 hover:shadow-brand-500/35 transition-all flex items-center justify-center gap-2">
+                <span>Send Message</span>
+                <i data-lucide="send" class="w-4 h-4"></i>
+              </button>
+            </form>
+
+            <div id="form-toast" class="hidden absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-emerald-600 text-white text-sm font-medium shadow-xl flex items-center gap-3 animate-fade-in">
+              <i data-lucide="check-circle-2" class="w-5 h-5 shrink-0"></i>
+              <span>Thank you! Your message has been received. I'll get back to you shortly.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-slate-200 dark:border-slate-800/80 bg-white/50 dark:bg-dark-surface/50 backdrop-blur-md py-12 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center text-white font-mono font-bold text-sm">
+            AW
+          </div>
+          <p class="text-xs text-slate-500 dark:text-slate-400">
+            © <span id="current-year">2026</span> Abdul Wahab • Computer Engineering Undergrad.
+          </p>
+        </div>
+
+        <div class="flex items-center gap-6 text-xs text-slate-500 dark:text-slate-400">
+          <a href="#hero" class="hover:text-brand-500 transition-colors">Back to Top ↑</a>
+          <a href="https://github.com" target="_blank" rel="noopener" class="hover:text-brand-500 transition-colors">GitHub</a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener" class="hover:text-brand-500 transition-colors">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+
+    <div id="project-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-sm transition-opacity">
+      <div class="bg-white dark:bg-dark-card border border-slate-200 dark:border-slate-800 rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 shadow-2xl relative animate-scale-up">
+        <button id="modal-close-btn" class="absolute top-5 right-5 p-2 rounded-xl text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" aria-label="Close modal">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+
+        <div id="modal-content"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+after this
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
